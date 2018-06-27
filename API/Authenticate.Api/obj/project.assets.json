@@ -12887,11 +12887,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\freedomk\\Source\\Repos\\POC\\DotNetCoreAuth\\Authenticate.Api\\Authenticate.Api.csproj",
+      "projectUniqueName": "C:\\Users\\freedomk\\Source\\Repos\\POC\\DotNetCoreAuth\\API\\Authenticate.Api\\Authenticate.Api.csproj",
       "projectName": "Authenticate.Api",
-      "projectPath": "C:\\Users\\freedomk\\Source\\Repos\\POC\\DotNetCoreAuth\\Authenticate.Api\\Authenticate.Api.csproj",
+      "projectPath": "C:\\Users\\freedomk\\Source\\Repos\\POC\\DotNetCoreAuth\\API\\Authenticate.Api\\Authenticate.Api.csproj",
       "packagesPath": "C:\\Users\\freedomk\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\freedomk\\Source\\Repos\\POC\\DotNetCoreAuth\\Authenticate.Api\\obj\\",
+      "outputPath": "C:\\Users\\freedomk\\Source\\Repos\\POC\\DotNetCoreAuth\\API\\Authenticate.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
