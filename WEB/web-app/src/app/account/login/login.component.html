@@ -1,0 +1,25 @@
+<header class="h-100">
+  <app-nav></app-nav>
+  <div class="view">
+    <div class="full-bg-img">
+      <div class="mask rgba-black-strong flex-center">
+        <div class="container">
+          <div class="white-text col-md-4 offset-4">
+            <form [formGroup]="loginForm">
+              <p class="h5 text-center mb-4">Sign in</p>
+              <div class="md-form">
+                <i class="fa fa-user prefix white-text"></i>
+                <input type="text" formControlName="defaultFormEmail" id="defaultForm-email" class="form-control" mdbInputDirective>
+                <label for="defaultForm-email">Your Username</label>
+              </div>            
+              <div class="text-center">
+                <input type="submit" class="btn btn-primary waves-light" mdbWavesEffect value="Sign In">
+              </div>
+            </form>
+            <!-- Login form -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
