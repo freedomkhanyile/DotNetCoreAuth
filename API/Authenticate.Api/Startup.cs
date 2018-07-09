@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Authenticate.Api.Data;
+using Authenticate.Api.Interfaces;
 using Authenticate.Api.Logic;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -60,6 +62,10 @@ namespace Authenticate.Api
                     { "Bearer", Enumerable.Empty<string>() },
                 });
             });
+
+            //Dependency Injection
+            services.AddTransient<IToken, TokenRepository>();
+            services.AddTransient<TokenLogic, TokenLogic>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

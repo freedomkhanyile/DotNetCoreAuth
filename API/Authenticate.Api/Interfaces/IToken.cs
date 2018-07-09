@@ -9,6 +9,6 @@ namespace Authenticate.Api.Interfaces
 {
     public interface IToken
     {
-        JwtSecurityTokenHandler RequestToken(TokenRequest request);
+        string RequestToken(TokenRequest request);
     }
 }
