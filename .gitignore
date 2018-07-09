@@ -4,8 +4,5 @@
 
 /.vs
 /API/.vs
-<<<<<<< HEAD
 API/Authenticate.Api.sln
-=======
 /Authenticate.Api
->>>>>>> f101c0125cbe7aaa62215ed9a8b9525fc4853aaa
