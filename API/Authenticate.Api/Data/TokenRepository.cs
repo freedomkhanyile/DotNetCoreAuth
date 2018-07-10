@@ -16,14 +16,17 @@ namespace Authenticate.Api.Data
     public class TokenRepository : IToken
     {
         private readonly IConfiguration _configuration;
-
-        public TokenRepository (IConfiguration configuration)
+        private readonly IBase _firebase;
+        public TokenRepository (IConfiguration configuration, IBase firebase)
         {
             _configuration = configuration;
+            _firebase = firebase;
         }
         public string RequestToken(TokenRequest request)
         {
-            if(request.Username == "Test")
+            var users = _firebase.GetUsers();
+            var user = users.FirstOrDefault(u => u.Email == request.Username);
+            if(user != null)
             {
                 var claims = new[]
                 {

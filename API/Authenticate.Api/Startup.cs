@@ -66,6 +66,7 @@ namespace Authenticate.Api
             //Dependency Injection
             services.AddTransient<IToken, TokenRepository>();
             services.AddTransient<TokenLogic, TokenLogic>();
+            services.AddTransient<IBase, FirebaseRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
