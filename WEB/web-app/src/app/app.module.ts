@@ -5,11 +5,13 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 
+
 @NgModule({
    declarations: [
       AppComponent,
       routingComponents,
-      NavComponent
+      NavComponent,
+       
    ],
    imports: [
       BrowserModule,
