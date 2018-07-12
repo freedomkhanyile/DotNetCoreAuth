@@ -9,11 +9,11 @@ import { AuthenticationService } from '../../_services';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  loginForm: FormGroup
-  loading = false
-  submitted = false
-  returnUrl: string
-  error = ''
+  loginForm: FormGroup;
+  loading = false;
+  submitted = false;
+  returnUrl: string;
+  error = '';
 
   constructor(
     private formBuilder: FormBuilder,
@@ -24,14 +24,13 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
-      username: ['', Validators.required]
-    });
-
+      username: ['', Validators.required]      
+  });
     //reset login page
     this.authenticationService.logout();
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
-  get f() { return this.loginForm.controls }
+  get f() { return this.loginForm.controls; }
 
   onSubmit(){
     this.submitted = true;

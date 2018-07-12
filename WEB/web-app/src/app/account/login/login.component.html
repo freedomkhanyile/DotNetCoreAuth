@@ -9,10 +9,10 @@
               <p class="h5 text-center mb-4">Sign in</p>
               <div class="md-form">
                 <i class="fa fa-user prefix white-text"></i>
-                <input type="text" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" formControlName="defaultFormEmail" id="defaultForm-email"
+                <input type="text" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" formControlName="username" id="defaultForm-email"
                   class="form-control white-text" mdbInputDirective>
                 <label for="defaultForm-email">Your Username</label>
-                <div *ngIf="f.username.errors.required">Username is required</div>
+                <div *ngIf="f.username.errors">Username is required</div>
               </div>
               <div class="text-center">
                 <input [disabled]="loading" type="submit" class="btn btn-primary waves-light" mdbWavesEffect value="Sign In">
