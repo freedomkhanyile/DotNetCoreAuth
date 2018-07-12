@@ -2,10 +2,11 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { LoginComponent } from "./account";
 import { HomeComponent } from './home';
+import { AuthGuard } from "./_guards";
 
 const routes: Routes = [
     { path: "**", component: LoginComponent },
-    { path: "home", component: HomeComponent } ,   
+    { path: "home", component: HomeComponent , canActivate: [AuthGuard]} ,   
     { path: "", component: LoginComponent }
 ];
 
