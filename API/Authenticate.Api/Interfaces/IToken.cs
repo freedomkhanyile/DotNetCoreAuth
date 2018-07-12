@@ -9,6 +9,6 @@ namespace Authenticate.Api.Interfaces
 {
     public interface IToken
     {
-        string RequestToken(TokenRequest request);
+        TokenResponse RequestToken(TokenRequest request);
     }
 }

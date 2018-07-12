@@ -22,7 +22,7 @@ namespace Authenticate.Api.Data
             _configuration = configuration;
             _firebase = firebase;
         }
-        public string RequestToken(TokenRequest request)
+        public TokenResponse RequestToken(TokenRequest request)
         {
             var users = _firebase.GetUsers();
             var user = users.FirstOrDefault(u => u.Email == request.Username);
@@ -47,8 +47,10 @@ namespace Authenticate.Api.Data
                     expires: DateTime.Now.AddMinutes(60),
                     signingCredentials: creds
                     );
-                
-                return new JwtSecurityTokenHandler().WriteToken(token);
+
+                var response = new TokenResponse();
+                response.Token =  new JwtSecurityTokenHandler().WriteToken(token);
+                return response;
             }
 
             return null;

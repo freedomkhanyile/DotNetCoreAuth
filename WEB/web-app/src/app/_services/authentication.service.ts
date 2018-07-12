@@ -14,7 +14,12 @@ export class AuthenticationService {
     login(username): Observable<any> {
         let data = { username: username };
         let reqHeader = new HttpHeaders({ 'Content-Type': 'application/json' })
-        return this.http.post(this.rootUrl + '/token', JSON.stringify(data), { headers: reqHeader });
+        return this.http.post(this.rootUrl + '/token', JSON.stringify(data), { headers: reqHeader })
+        .pipe(map((response : any)=>{
+            if(response){
+                localStorage.setItem('currentUser', JSON.stringify({username,token:response.token}));
+            }
+        }));
     }
     logout() {
         localStorage.removeItem('currentUser');

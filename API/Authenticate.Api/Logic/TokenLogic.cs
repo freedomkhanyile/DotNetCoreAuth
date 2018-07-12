@@ -15,7 +15,7 @@ namespace Authenticate.Api.Logic
             _token = token;
         }
 
-        public string GetToken(TokenRequest request)
+        public TokenResponse GetToken(TokenRequest request)
         {
             return _token.RequestToken(request);
         }
