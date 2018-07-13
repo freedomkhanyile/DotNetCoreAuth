@@ -1,10 +1,9 @@
 import { JwtInterceptor } from './_helpers/jwt-interceptor';
-import { routingComponents, AppRoutingModule } from './app-routing-module';
+import { routingComponents,  routing } from './app-routing-module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AppComponent } from './app.component';
-import { NavComponent } from './nav/nav.component';
 import { ReactiveFormsModule }    from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ErrorInterceptor } from './_helpers';
@@ -12,13 +11,12 @@ import { ErrorInterceptor } from './_helpers';
 @NgModule({
    declarations: [
       AppComponent,
-      routingComponents,
-      NavComponent,
+      routingComponents    
        
    ],
    imports: [
       BrowserModule,
-      AppRoutingModule,
+      routing,
       ReactiveFormsModule,
       HttpClientModule,
       MDBBootstrapModule.forRoot()

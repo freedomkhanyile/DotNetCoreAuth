@@ -24,27 +24,31 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
-      username: ['', Validators.required]      
-  });
+      username: ['', Validators.required]
+    });
     //reset login page
     this.authenticationService.logout();
-    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/home';
   }
   get f() { return this.loginForm.controls; }
 
-  onSubmit(){
+  onSubmit() {
     this.submitted = true;
-    if(this.loginForm.invalid){
+    if (this.loginForm.invalid) {
       return;
     }
+    
     this.loading = true;
-    this.authenticationService.login(this.f.username.value)         
-        .subscribe(response =>  {         
+    this.authenticationService.login(this.f.username.value)
+      .subscribe(response => {
+        if (response) {
+          localStorage.setItem("currentUser",JSON.stringify({ token: response.token }));
           this.router.navigate([this.returnUrl]);
-        }, 
-      error => {
-        this.error = error
-        this.loading = false
-      })
+        }
+      },
+        error => {
+          this.error = error
+          this.loading = false
+        })
   }
 }

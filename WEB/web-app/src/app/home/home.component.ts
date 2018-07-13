@@ -6,13 +6,10 @@ import { TestService } from '../_services';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  authorised: any;
-  constructor(private testService: TestService) { }
 
-  ngOnInit() {
-    this.testService.Get().subscribe(response =>{
-      this.authorised = response;
-    });
+  constructor() { }
+
+  ngOnInit() {   
   }
 
 }

@@ -5,7 +5,7 @@
       <div class="mask rgba-black-strong flex-center">
         <div class="container">
           <div class="white-text col-md-4 offset-4">
-            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="form" [formGroup]="loginForm" >
               <p class="h5 text-center mb-4">Sign in</p>
               <div class="md-form">
                 <i class="fa fa-user prefix white-text"></i>
@@ -15,12 +15,12 @@
                 <div *ngIf="f.username.errors">Username is required</div>
               </div>
               <div class="text-center">
-                <input [disabled]="loading" type="submit" class="btn btn-primary waves-light" mdbWavesEffect value="Sign In">
+                <input [disabled]="loading" type="submit"(click)="onSubmit()" class="btn btn-primary waves-light" mdbWavesEffect value="Sign In">
                 <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="
                 />
               </div>
               <div *ngIf="error" class="alert alert-danger">{{error}}</div>
-            </form>
+            </div>
             <!-- Login form -->
           </div>
         </div>
