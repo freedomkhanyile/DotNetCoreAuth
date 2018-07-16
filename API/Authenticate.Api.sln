@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authenticate.Api", "Authent
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirebaseNet", "FirebaseNet\FirebaseNet.csproj", "{4A871814-077F-46A7-99F6-2A0A6B00404A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authenticate.Api.Tests", "Authenticate.Api.Tests\Authenticate.Api.Tests.csproj", "{3414297E-11BC-4E8B-BD68-1581EF8F47E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4A871814-077F-46A7-99F6-2A0A6B00404A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A871814-077F-46A7-99F6-2A0A6B00404A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A871814-077F-46A7-99F6-2A0A6B00404A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3414297E-11BC-4E8B-BD68-1581EF8F47E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3414297E-11BC-4E8B-BD68-1581EF8F47E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3414297E-11BC-4E8B-BD68-1581EF8F47E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3414297E-11BC-4E8B-BD68-1581EF8F47E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

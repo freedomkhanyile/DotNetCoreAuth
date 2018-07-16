@@ -37,8 +37,8 @@ namespace Authenticate.Api
                         ValidateAudience = true,
                         ValidateLifetime = true,
                         ValidateIssuerSigningKey = true,
-                        ValidIssuer = "yourdomain.com",
-                        ValidAudience = "yourdomain.com",
+                        ValidIssuer = "https://github.com/freedomkhanyile",
+                        ValidAudience = "https://github.com/freedomkhanyile",
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["SecurityKey"]))
                     };
                 });
