@@ -44,9 +44,9 @@ C:\Users\freedomk\Source\Repos\POC\DotNetCoreAuth\API\FirebaseNet\obj\Debug\nets
 C:\Users\freedomk\Source\Repos\POC\POC-Websites\API\FirebaseNet\bin\Debug\netstandard2.0\FirebaseNet.deps.json
 C:\Users\freedomk\Source\Repos\POC\POC-Websites\API\FirebaseNet\bin\Debug\netstandard2.0\FirebaseNet.dll
 C:\Users\freedomk\Source\Repos\POC\POC-Websites\API\FirebaseNet\bin\Debug\netstandard2.0\FirebaseNet.pdb
-C:\Users\freedomk\Source\Repos\POC\POC-Websites\API\FirebaseNet\obj\Debug\netstandard2.0\FirebaseNet.csprojAssemblyReference.cache
 C:\Users\freedomk\Source\Repos\POC\POC-Websites\API\FirebaseNet\obj\Debug\netstandard2.0\FirebaseNet.csproj.CoreCompileInputs.cache
 C:\Users\freedomk\Source\Repos\POC\POC-Websites\API\FirebaseNet\obj\Debug\netstandard2.0\FirebaseNet.AssemblyInfoInputs.cache
 C:\Users\freedomk\Source\Repos\POC\POC-Websites\API\FirebaseNet\obj\Debug\netstandard2.0\FirebaseNet.AssemblyInfo.cs
 C:\Users\freedomk\Source\Repos\POC\POC-Websites\API\FirebaseNet\obj\Debug\netstandard2.0\FirebaseNet.dll
 C:\Users\freedomk\Source\Repos\POC\POC-Websites\API\FirebaseNet\obj\Debug\netstandard2.0\FirebaseNet.pdb
+C:\Users\freedomk\Source\Repos\POC\POC-Websites\API\FirebaseNet\obj\Debug\netstandard2.0\FirebaseNet.csprojAssemblyReference.cache

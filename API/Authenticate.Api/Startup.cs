@@ -88,7 +88,8 @@ namespace Authenticate.Api
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
 
             app.UseMvcWithDefaultRoute();
         }
