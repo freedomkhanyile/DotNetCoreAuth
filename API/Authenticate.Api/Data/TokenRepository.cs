@@ -25,7 +25,7 @@ namespace Authenticate.Api.Data
         public TokenResponse RequestToken(TokenRequest request)
         {
             var users = _firebase.GetUsers();
-            var user = users.FirstOrDefault(u => u.Email == request.Username);
+            var user = users.FirstOrDefault(u => u.Email.ToLower() == request.Username.ToLower());
             if(user != null)
             {
                 var claims = new[]
@@ -33,7 +33,7 @@ namespace Authenticate.Api.Data
                     new Claim(ClaimTypes.Name, request.Username),
                     new Claim("CompleteHRProcess",""),
                     new Claim(CustomClaimTypes.EmploymentCommenced,
-                               new DateTime(2018,10,04).ToString(),
+                               new DateTime(2017,10,04).ToString(),
                                ClaimValueTypes.DateTime)
                 };
 
@@ -41,8 +41,8 @@ namespace Authenticate.Api.Data
                 var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
                 var token = new JwtSecurityToken(
-                    issuer: "yourdomain.com",
-                    audience: "yourdomain.com",
+                    issuer: "https://github.com/freedomkhanyile",
+                    audience: "https://github.com/freedomkhanyile",
                     claims: claims,
                     expires: DateTime.Now.AddMinutes(60),
                     signingCredentials: creds
