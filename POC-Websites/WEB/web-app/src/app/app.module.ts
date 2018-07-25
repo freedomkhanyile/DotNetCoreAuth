@@ -20,6 +20,7 @@ import { ErrorInterceptor } from './_helpers';
       ReactiveFormsModule,
       HttpClientModule,
       MDBBootstrapModule.forRoot()
+     
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [
