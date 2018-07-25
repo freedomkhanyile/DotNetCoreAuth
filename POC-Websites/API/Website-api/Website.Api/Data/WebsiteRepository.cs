@@ -18,7 +18,15 @@ namespace Website.Api.Data
 
         public int AddWebsite(WebsiteModel model)
         {
+            model.Status = "Active";
+            model.DatePublished = DateTime.Now.ToShortDateString();
+
           return _firebase.AddWebsite(JsonConvert.SerializeObject(model));
+        }
+
+        public List<WebsiteModel> GetWebsites()
+        {
+            return _firebase.GetWebsites();
         }
     }
 }

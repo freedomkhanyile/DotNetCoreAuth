@@ -18,9 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="FirebaseNet">
-      <HintPath>..\..\Authenticate-api\FirebaseNet\bin\Debug\netstandard2.0\FirebaseNet.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\..\Authenticate-api\FirebaseNet\FirebaseNet.csproj" />
   </ItemGroup>
 
 </Project>

@@ -8,6 +8,7 @@ namespace Website.Api.Interfaces
 {
     public interface IWebsite
     {
+        List<WebsiteModel> GetWebsites();
         int AddWebsite(WebsiteModel model);
     }
 }

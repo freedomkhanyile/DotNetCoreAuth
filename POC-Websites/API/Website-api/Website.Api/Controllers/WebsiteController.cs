@@ -19,7 +19,8 @@ namespace Website.Api.Controllers
             _websiteLogic = websiteLogic;
         }
         // GET: /<controller>/
-        [HttpPost("AddWebsite")]
+        [HttpPost]
+        [Route("AddWebsite")]
         public IActionResult AddWebsite([FromBody] WebsiteModel model)
         {
             try
@@ -31,6 +32,19 @@ namespace Website.Api.Controllers
                 throw ex;
             }
             
+        }
+
+        [HttpGet("GetWebsites")]
+        public IActionResult Get()
+        {
+            try
+            {
+                return Ok(_websiteLogic.GetWebsites());
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

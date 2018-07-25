@@ -5,6 +5,7 @@ C:\Users\freedomk\Source\Repos\POC\POC-Websites\API\Website-api\Website.Api\bin\
 C:\Users\freedomk\Source\Repos\POC\POC-Websites\API\Website-api\Website.Api\bin\Debug\netcoreapp2.0\Website.Api.pdb
 C:\Users\freedomk\Source\Repos\POC\POC-Websites\API\Website-api\Website.Api\bin\Debug\netcoreapp2.0\FirebaseNet.dll
 C:\Users\freedomk\Source\Repos\POC\POC-Websites\API\Website-api\Website.Api\bin\Debug\netcoreapp2.0\FirebaseNet.pdb
+C:\Users\freedomk\Source\Repos\POC\POC-Websites\API\Website-api\Website.Api\obj\Debug\netcoreapp2.0\Website.Api.csprojAssemblyReference.cache
 C:\Users\freedomk\Source\Repos\POC\POC-Websites\API\Website-api\Website.Api\obj\Debug\netcoreapp2.0\Website.Api.csproj.CoreCompileInputs.cache
 C:\Users\freedomk\Source\Repos\POC\POC-Websites\API\Website-api\Website.Api\obj\Debug\netcoreapp2.0\Website.Api.AssemblyInfoInputs.cache
 C:\Users\freedomk\Source\Repos\POC\POC-Websites\API\Website-api\Website.Api\obj\Debug\netcoreapp2.0\Website.Api.AssemblyInfo.cs

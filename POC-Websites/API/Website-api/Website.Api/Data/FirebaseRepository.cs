@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Website.Api.Interfaces;
 using Website.Api.Entities; 
 using Microsoft.Extensions.Configuration;
-using FirebaseNet.DataLogic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using FirebaseNet.DataLogic;
 
 namespace Website.Api.Data
 {
