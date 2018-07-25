@@ -2,7 +2,4 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs
-/API/.vs
-API/Authenticate.Api.sln
-/Authenticate.Api
+/POC-Websites/API/Authenticate-api/.vs
