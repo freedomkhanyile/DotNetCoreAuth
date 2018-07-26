@@ -5,9 +5,9 @@ import { LoginComponent } from "./account";
 import { HomeComponent } from './home';
 import { AuthGuard } from "./_guards";
 import { NavComponent } from "./nav";
+import { ListWebsitesComponent } from "./website";
 
-const routes: Routes = [
- 
+const routes: Routes = [ 
     { path: "home", component: HomeComponent,  canActivate: [AuthGuard] } ,   
     { path: "", component: LoginComponent },
     { path: "**", component: LoginComponent }
@@ -16,6 +16,7 @@ const routes: Routes = [
 export const routingComponents = [
     NavComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    ListWebsitesComponent
 ]; 
 export const routing = RouterModule.forRoot(routes);
