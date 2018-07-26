@@ -1,0 +1,38 @@
+<app-nav></app-nav>
+<main>
+  <div class="container" style="height:1300px;">
+    <div class="row mt-5 pt-5">
+      <div class="col text-center">
+        <!--Panel-->
+        <div class="card">
+          <div class="card-header  bg-dark lighten-1 white-text">
+            Add - Website
+          </div>
+          <div class="card-body">
+            <!-- Material form register -->
+            <div class="form col-md-6 offset-3" [formGroup]="cardForm">               
+              <div class="md-form">                
+                <input type="text" id="validateName" formControlName="validateName" class="form-control" mdbInputDirective>
+                <label for="validateName" class="font-weight-light">Website Name</label>
+              </div>             
+              <div class="md-form">            
+                <textarea type="text" id="validateDescription" formControlName="validateDescription" class="form-control md-textarea" mdbInputDirective></textarea>
+                <label for="validateDescription">Website Description</label>
+              </div>
+              <div class="md-form">                
+                <input type="text" id="validateUrl" formControlName="validateUrl" class="form-control" mdbInputDirective>
+                <label for="validateUrl" class="font-weight-light">Website Url</label>
+              </div> 
+              <div class="text-center py-4 mt-3">
+                <button class="btn btn-primary waves-light" type="submit" mdbWavesEffect>CREATE</button>
+              </div>
+            </div>
+            <!-- Material form register -->
+          </div>
+        </div>
+        <!--/.Panel-->
+      </div>
+    </div>
+  </div>
+</main>
+<!-- /.Main -->
