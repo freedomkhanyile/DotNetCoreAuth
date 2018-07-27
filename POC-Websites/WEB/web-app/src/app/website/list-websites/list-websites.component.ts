@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WebsiteService } from '../../_services';
 import { Observable } from '../../../../node_modules/rxjs';
+import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 
 @Component({
   selector: 'app-list-websites',
@@ -9,15 +10,26 @@ import { Observable } from '../../../../node_modules/rxjs';
 })
 export class ListWebsitesComponent implements OnInit {
 
-  websites$ : Observable<any[]>;
-
+  websites :  any[];
+  template: string =`<img src="assets/img/loader.gif"/>`;
   constructor(
-    private websiteService : WebsiteService
+    private websiteService : WebsiteService,
+    private spinnerService : Ng4LoadingSpinnerService
   ) { }
 
   ngOnInit() {
-    debugger
-    this.websites$ = this.websiteService.getWebsites();
+    //this.websites$ = this.websiteService.getWebsites();
+ 
+    this.getWebsites();
+
   }
 
+  getWebsites(){
+    this.spinnerService.show();
+    this.websiteService.getWebsites()
+        .subscribe(res =>{
+          this.websites = res;
+          this.spinnerService.hide();  
+        });
+  }
 }
