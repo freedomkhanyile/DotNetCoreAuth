@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { website_api_url } from '../_shared';
  
@@ -15,5 +15,10 @@ export class WebsiteService {
 
   getWebsites(): Observable<any> {
     return this.http.get<any>(this.rootUrl + '/website/GetWebsites');
+  }
+  
+  addWebsite(data): Observable<any>{
+    let reqHeader = new HttpHeaders({ 'Content-Type': 'application/json' })
+    return this.http.post(this.rootUrl + '/website/AddWebsite', JSON.stringify(data), { headers: reqHeader });
   }
 }

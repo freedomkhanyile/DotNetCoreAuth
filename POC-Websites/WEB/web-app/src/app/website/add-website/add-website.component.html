@@ -11,23 +11,32 @@
           <div class="card-body">
             <!-- Material form register -->
             <div class="form col-md-6 offset-3" [formGroup]="cardForm">               
-              <div class="md-form">                
-                <input type="text" id="validateName" formControlName="validateName" class="form-control" mdbInputDirective>
-                <label for="validateName" class="font-weight-light">Website Name</label>
-              </div>             
-              <div class="md-form">            
-                <textarea type="text" id="validateDescription" formControlName="validateDescription" class="form-control md-textarea" mdbInputDirective></textarea>
-                <label for="validateDescription">Website Description</label>
+              <div class="md-form">   
+                <input type="text" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" formControlName="name" id="name"
+                  class="form-control" mdbInputDirective>
+                <label for="name">Website Name</label>
+                <div *ngIf="f.name.errors" class="red-text">*</div>
               </div>
-              <div class="md-form">                
-                <input type="text" id="validateUrl" formControlName="validateUrl" class="form-control" mdbInputDirective>
-                <label for="validateUrl" class="font-weight-light">Website Url</label>
-              </div> 
+              <div class="md-form">                 
+                <input type="text" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" formControlName="description" id="description"
+                  class="form-control" mdbInputDirective>
+                <label for="description">Website description</label>
+                <div *ngIf="f.description.errors" class="red-text">*</div>
+              </div>
+              <div class="md-form">          
+                <input type="text" [ngClass]="{ 'is-invalid': submitted && f.url.errors }" formControlName="url" id="url"
+                  class="form-control" mdbInputDirective>
+                <label for="url">Website Url</label>
+                <div *ngIf="f.url.errors" class="red-text">*</div>
+              </div>
               <div class="text-center py-4 mt-3">
-                <button class="btn btn-primary waves-light" type="submit" mdbWavesEffect>CREATE</button>
+                <button class="btn btn-primary waves-light" (click)="add()" type="submit" mdbWavesEffect>CREATE</button>
               </div>
             </div>
             <!-- Material form register -->
+          </div>
+          <div>
+           <p style="color: red">{{message}}</p> 
           </div>
         </div>
         <!--/.Panel-->
