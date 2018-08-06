@@ -19,7 +19,9 @@ namespace Website.Api.Logic
         public Results AddWebsite(WebsiteModel model)
         {
             try
-            {               
+            {
+                //Id increaments
+                model.Id = _websiteRepo.GetWebsites().ToList().Count + 1;
                 var result = _websiteRepo.AddWebsite(model);
 
                 if(result == 1)

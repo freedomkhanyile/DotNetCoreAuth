@@ -11,6 +11,7 @@ import { ErrorInterceptor } from './_helpers';
 import { WebsiteService } from './_services';
 import { ToastrModule } from 'ngx-toastr';
 import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
+import {PaginatorModule} from 'primeng/paginator'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
     HttpClientModule,
     MDBBootstrapModule.forRoot(),
     ToastrModule,
-    Ng4LoadingSpinnerModule 
+    Ng4LoadingSpinnerModule ,
+    PaginatorModule
   ],
   schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA],
   providers: [
