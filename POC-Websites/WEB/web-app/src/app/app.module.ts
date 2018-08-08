@@ -12,10 +12,15 @@ import { WebsiteService } from './_services';
 import { ToastrModule } from 'ngx-toastr';
 import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 import {PaginatorModule} from 'primeng/paginator'; 
+import { WebsitePipe } from './_shared';
+import { Ng2SearchPipeModule } from 'ng2-search-filter'; //importing the module
+import {NgxPaginationModule} from 'ngx-pagination';
+ 
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents
+    routingComponents,
+    WebsitePipe
   ],
   imports: [
     BrowserModule,
@@ -25,14 +30,17 @@ import {PaginatorModule} from 'primeng/paginator';
     MDBBootstrapModule.forRoot(),
     ToastrModule,
     Ng4LoadingSpinnerModule ,
-    PaginatorModule
+    PaginatorModule,
+    Ng2SearchPipeModule,
+    NgxPaginationModule
   ],
   schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     AuthenticationService,
-    WebsiteService
+    WebsiteService,
+ 
   ],
   bootstrap: [AppComponent]
 

@@ -1,5 +1,16 @@
 
-
+ <!-- Grid row -->
+ <div class="row">
+  <!-- Grid column -->
+  <div class="col-md-12">
+    <div class="md-form">
+      <input type="search" [(ngModel)]="searchText" id="search" class="form-control" mdbInputDirective [mdbValidate]="false">
+      <label for="search">Search For A Website</label>
+    </div>
+  </div>
+  <!-- Grid column -->
+</div>
+<!-- Grid row -->
 <!--Table-->
 <table class="table" >
     <!--Table head-->
@@ -15,63 +26,19 @@
     <!--Table head-->  
     <!--Table body-->
     <tbody>
-        <tr *ngFor="let item of websites; let i = index">           
-          <td *ngIf="item.id >= firstVisibleIndex && item.id <= lastVisibleIndex">{{item.name}}</td>
-          <td *ngIf="item.id >= firstVisibleIndex && item.id <= lastVisibleIndex">{{item.description}}</td>        
-          <td *ngIf="item.id >= firstVisibleIndex && item.id <= lastVisibleIndex">{{item.publisher}}</td>
-          <td *ngIf="item.id >= firstVisibleIndex && item.id <= lastVisibleIndex">{{item.datePublished}}</td>
-          <td *ngIf="item.id >= firstVisibleIndex && item.id <= lastVisibleIndex"><a href="{{item.url}}" target="_blank" class="btn btn-primary">visit</a></td> 
-        </tr>        
-  
+        <tr *ngFor="let item of websites | filter: searchText | paginate: { itemsPerPage: 5, currentPage: p }; let i = index">           
+          <td>{{item.name}}</td>
+          <td>{{item.description}}</td>        
+          <td>{{item.publisher}}</td>
+          <td>{{item.datePublished}}</td>
+          <td ><a href="{{item.url}}" target="_blank" class="btn btn-primary">visit</a></td> 
+        </tr>     
     </tbody>
     <!--Table body-->
   </table>
-  <hr class="my-0">
-   <!--Bottom Table UI-->
-   <div class="d-flex justify-content-center">
-  
-      <!--Pagination -->
-      <nav class="my-4 pt-2">
-        <ul class="pagination pagination-circle pg-purple mb-0">
-  
-          <!--First-->
-          <li class="page-item clearfix d-none d-md-block" (click)="firstPage()" [ngClass]="{disabled: activePage == 1}">
-            <a class="page-link">First</a>
-          </li>
-  
-          <!--Arrow left-->
-          <li class="page-item" (click)="previousPage($event)" [ngClass]="{disabled: activePage == 1}">
-            <a class="page-link" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-              <span class="sr-only">Previous</span>
-            </a>
-          </li>
-  
-          <!--Numbers-->
-          <li #pages *ngFor="let page of paginators | slice:firstVisiblePaginator:lastVisiblePaginator; let i = index" class="page-item" [ngClass]="{active: i + firstVisiblePaginator + 1 == activePage}">
-              <a class="page-link waves-light" (click)="changePage($event)" mdbWavesEffect>{{page}}</a>
-          </li>
-  
-  
-  
-          <!--Arrow right-->
-          <li class="page-item" (click)="nextPage($event)" [ngClass]="{disabled: activePage == numberOfPaginators}">
-            <a class="page-link" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-              <span class="sr-only">Next</span>
-            </a>
-          </li>
-  
-          <!--First-->
-          <li class="page-item clearfix d-none d-md-block" (click)="lastPage()" [ngClass]="{disabled: activePage == numberOfPaginators}">
-            <a class="page-link">Last</a>
-          </li>
-  
-        </ul>
-      </nav>
-      <!--/Pagination -->
-  
-    </div>
+  <hr class="my-0">  
+  <br/>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
     <!--Bottom Table UI-->
   <ng4-loading-spinner [template]="template"> </ng4-loading-spinner>
   <!--Table-->
